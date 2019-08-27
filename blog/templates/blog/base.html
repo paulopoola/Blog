@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     {% if title %}
         <title>Paul's Blog Community - {{ title }}</title>
     {% else %}
@@ -28,7 +31,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+              <!-- <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a> -->
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
             </div>
             <!-- Navbar Right Side -->
@@ -58,19 +61,23 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
+            <h3>PBC sidebar</h3>
+            <p class='text-muted'>Other info can be found here.
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">Contacts</li>
+                <li class="list-group-item list-group-item-light"><a href="{% url 'blog-home' %}">Latest Posts</a></li>
+                <li class="list-group-item list-group-item-light"><a href="#">Announcements</a></li>
+                <li class="list-group-item list-group-item-light"><a href="{% url 'contacts' %}">Contacts</a></li>
               </ul>
             </p>
           </div>
         </div>
       </div>
     </main>
+    <!-- <footer>
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; Opoola Paul 2019</span>
+      </div>
+    </footer> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

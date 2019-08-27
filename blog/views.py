@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.views.generic import (ListView, UpdateView, DeleteView,
-                                  DetailView, CreateView)
+                                  DetailView, CreateView, TemplateView)
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 # def home(request):
@@ -71,3 +71,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+class ContactsView(TemplateView):
+    template_name = "blog/contacts.html"
